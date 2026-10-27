@@ -1,0 +1,250 @@
+/* ==========================================================================
+   FOOTER — CHARCOAL BLACK, CHAMPAGNE GOLD, WHITE & WINE RED
+   ========================================================================== */
+
+.footer-luxury {
+  position: relative;
+  background: var(--charcoal-900);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 80px;
+  overflow: hidden;
+}
+
+.footer-top-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #a67f1e 20%, #f9e8b6 50%, #a67f1e 80%, transparent 100%);
+  opacity: 0.75;
+}
+
+.footer-glow {
+  position: absolute;
+  top: -120px;
+  left: 20%;
+  width: 500px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(122, 21, 38, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1.1fr 1.4fr;
+  gap: 70px;
+  padding-bottom: 60px;
+}
+
+/* Brand Column */
+.footer-lockup {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.footer-logo-ring {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--gold-500) 0%, var(--wine-700) 100%);
+  box-shadow: 0 0 14px rgba(212, 175, 55, 0.2);
+}
+
+.footer-logo-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.footer-brand-title {
+  display: block;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: var(--white);
+  line-height: 1;
+}
+
+.footer-brand-loc {
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  color: var(--gold-400);
+  font-weight: 600;
+  margin-top: 4px;
+  display: block;
+}
+
+.footer-tagline-quote {
+  font-size: 2.1rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--white);
+  margin-bottom: 12px;
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-description {
+  max-width: 380px;
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+
+.footer-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(92, 15, 28, 0.35);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 9999px;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  color: var(--gold-300);
+  font-weight: 600;
+}
+
+.footer-badge-pill .wine-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--wine-500);
+  box-shadow: 0 0 6px var(--wine-500);
+}
+
+/* Nav Links Grid */
+.footer-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  padding-top: 10px;
+}
+
+.footer-group-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.66rem;
+  letter-spacing: 0.18em;
+  color: var(--gold-400);
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links-list li {
+  margin-bottom: 11px;
+}
+
+.footer-links-list a {
+  font-size: 0.8rem;
+  color: rgba(245, 245, 247, 0.7);
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.footer-links-list a:hover {
+  color: var(--gold-300);
+  transform: translateX(3px);
+}
+
+.footer-house-note {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.footer-wine-quote {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--gold-200);
+  border-left: 2px solid var(--wine-600);
+  padding-left: 12px;
+  line-height: 1.4;
+}
+
+/* Tribute Bottom Bar */
+.footer-tribute-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  background: var(--charcoal-950);
+  padding: 26px 0 30px;
+}
+
+.tribute-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+.tribute-text {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1rem;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.founder-tag {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: var(--gold-400);
+  font-weight: 600;
+}
+
+.founder-quote {
+  color: var(--white);
+  font-style: italic;
+}
+
+.copyright-text {
+  font-size: 0.65rem;
+  color: var(--text-faint);
+  margin-top: 4px;
+}
+
+/* Responsive Footer */
+@media (max-width: 880px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    padding-bottom: 45px;
+  }
+
+  .footer-nav-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (max-width: 580px) {
+  .footer-luxury {
+    padding-top: 60px;
+  }
+
+  .footer-nav-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .footer-tagline-quote {
+    font-size: 1.8rem;
+  }
+}
