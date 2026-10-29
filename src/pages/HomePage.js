@@ -49,6 +49,26 @@ const HomePage = () => {
     return () => window.clearInterval(timer);
   }, []);
 
+  useEffect(() => {
+    const elements = document.querySelectorAll('[data-reveal]');
+    if (!('IntersectionObserver' in window)) {
+      elements.forEach((element) => element.classList.add('is-visible'));
+      return undefined;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    elements.forEach((element) => observer.observe(element));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="home-redesign">
       {/* ================= HERO SECTION ================= */}
@@ -136,7 +156,7 @@ const HomePage = () => {
       </section>
 
       {/* ================= INTRO STRIP ================= */}
-      <section className="intro-marquee-strip">
+      <section className="intro-marquee-strip" data-reveal>
         <div className="container intro-flex">
           <div className="intro-left">
             <span className="intro-monogram">C.</span>
@@ -154,7 +174,7 @@ const HomePage = () => {
 
       {/* ================= KINDA CHIC PHILOSOPHY & SLIDER ================= */}
       <section className="kinda-chic-section section-space" id="quote-section">
-        <div className="container kinda-chic-grid">
+        <div className="container kinda-chic-grid" data-reveal>
           <div className="chic-sidebar">
             <span className="eyebrow">A CHAMPAGNIACS STATE OF MIND</span>
             <h2 className="chic-title">
@@ -224,7 +244,7 @@ const HomePage = () => {
 
       {/* ================= PATHWAYS / PILLARS ================= */}
       <section className="pathways-section section-space">
-        <div className="container">
+        <div className="container" data-reveal>
           <div className="section-header-row">
             <div>
               <span className="eyebrow">YOUR KIND OF GOOD TIME</span>

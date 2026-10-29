@@ -170,15 +170,17 @@ export const StaggeredMenu = ({
 
   const toggleMenu = () => {
     const target = !openRef.current;
-    openRef.current = target;
-    setOpen(target);
 
     if (target) {
+      // Opening: set ref + state, build & play timeline
+      openRef.current = true;
+      setOpen(true);
       if (onMenuOpen) onMenuOpen();
       const tl = buildOpenTimeline();
       openTlRef.current = tl;
       tl?.play();
     } else {
+      // Closing: closeMenu guards on openRef.current (still true here)
       closeMenu();
     }
   };
